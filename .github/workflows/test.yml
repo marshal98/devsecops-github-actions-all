@@ -1,0 +1,21 @@
+name: 01-Building Blocks
+
+on:
+  workflow_dispatch:
+
+jobs:
+    echo-hello:
+        runs-on: self-hosted
+        steps:
+            - name: Say Hello
+              run: echo "Hello World!"
+                        
+    echo-goodbye:
+        runs-on: self-hosted
+        steps:
+            - name: Failed Step
+              run: |
+                echo "I will Succeed"
+                exit 0
+            - name: Say Goodbye
+              run: echo "GoodBye"
